@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  position: relative;
+  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* background-color: #ddd; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a {
+  text-decoration: none;
+}
+
+.btn {
+  /* padding: 0.8rem 1.2rem; */
+  background-color: #F8AC30;
+  border-radius: 0px 5px 5px 0px;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 560px;
+  height: 100vh;
+  margin: 0 auto;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #c0c7ca;
+}
+
+.section-container {
+  margin: 0 2rem;
+}
+
+.header {
+  background-color: #1d1d1d;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  font-size: 3rem;
+}
+
+.form-control {
+  padding: 2rem 0;
+}
+
+.form-control input {
+  padding: 0.8rem 1.5rem;
+}
+
+.form-control input:first-child {
+  width: 70%;
+  border-radius: 5px 0px 0px 5px;
+  border: 2px;
+  outline: none;
+}
+
+
+.task-list {
+  width: 80%;
+  margin: 0.5rem auto;
+}
+
+.task-list li {
+  background-color: #f8f8f8;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  transition: 0.2s;
+
+  -webkit-box-shadow: 0px 70px 100px 0px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0px 70px 100px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 70px 100px 0px rgba(0, 0, 0, 0.2);
 }
 
-.App-link {
-  color: #61dafb;
+.task-list li:hover {
+  background-color: #ddd;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task-list li:nth-child(odd) {
+  background: #ddd;
+}
+
+.task-list li:hover {
+  background-color: #888;
+  color: #fff;
+}
+
+.task-list .active {
+  background-color: #aaa;
+  text-decoration: line-through;
+  color: #FFF;
+}
+
+.task-list .active::before {
+  content: '';
+  position: absolute;
+  border-color: #1d1d1d;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: -18px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+
+
+.delete-btn {
+  border: 0;
+  background-color: Transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  color: rgba(255, 21, 0, 0.897);
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  transform: scale(1.1);
 }
